@@ -201,9 +201,20 @@
     </footer>
 
     <script>
+      // Update year
       document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script>
+
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Form submission handling
       (function(){
         var form = document.querySelector('.contact-form');
         if(!form) return;
