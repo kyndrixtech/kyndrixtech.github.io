@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiry Submitted</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="logo">KYNDRIX</div>
+        <nav class="nav-links">
+          <a href="/" class="cta">Back to Home</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="contact">
+        <div class="container contact-card" style="text-align:center;">
+          <p class="eyebrow">Thank You</p>
+          <h2>Your inquiry has been submitted.</h2>
+          <p>We will respond within one business day.</p>
+          <div style="margin-top:24px;">
+            <a href="/" class="button primary">Return to Home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="logo">KYNDRIX</div>
+        <p>Trusted technology partner for government, enterprise, and mission-driven organizations.</p>
+        <p class="footer-meta">© <span id="year"></span> KYNDRIX. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
