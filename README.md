@@ -1,1 +1,0 @@
-# kyndrixtech.github.io
