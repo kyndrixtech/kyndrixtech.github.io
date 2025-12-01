@@ -381,3 +381,26 @@ body {
     padding: 2.2rem;
   }
 }
+
+/* Thank you page card override */
+.thankyou-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.thankyou-card h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.thankyou-card .subtext {
+  color: rgba(10, 10, 10, 0.68);
+}
+
+.thankyou-card .button {
+  margin-top: 0.5rem;
+}
