@@ -289,9 +289,24 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.section-subheader {
+  text-align: center;
+  margin: 6rem 0 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-subheader h3 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
 }
 
@@ -301,20 +316,6 @@ html {
   padding: 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.card:nth-child(1) {
-  animation: fadeInUp 1s ease forwards 0.2s;
-}
-
-.card:nth-child(2) {
-  animation: fadeInUp 1s ease forwards 0.4s;
-}
-
-.card:nth-child(3) {
-  animation: fadeInUp 1s ease forwards 0.6s;
 }
 
 .card:hover {
