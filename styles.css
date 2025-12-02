@@ -657,6 +657,24 @@ html {
   margin-top: 2rem;
 }
 
+.footer-divider {
+  width: 80px;
+  height: 1px;
+  background-color: #d2d2d7;
+  margin: 1rem auto 1.5rem;
+  opacity: 0.6;
+}
+
+.land-acknowledgement {
+  font-size: 0.9rem;
+  color: #86868b;
+  line-height: 1.7;
+  text-align: center;
+  opacity: 0.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Thank you page card override */
 .thankyou-card {
   display: flex;
