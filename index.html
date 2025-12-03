@@ -49,7 +49,7 @@
       </section>
 
       <section id="services" class="services">
-        <div class="container section-header">
+        <div class="container section-header fade-in-section">
           <p class="eyebrow">What We Deliver</p>
           <h2>Integrated IT solutions tailored to complex environments.</h2>
         </div>
@@ -237,19 +237,19 @@
       </section>
 
       <section id="cases" class="cases">
-        <div class="container section-header">
+        <div class="container section-header fade-in-section">
           <p class="eyebrow">Case Studies</p>
           <h2>Proven impact across Asia-Pacific and beyond.</h2>
         </div>
         <div class="container case-grid">
-          <article class="case-card">
+          <article class="case-card fade-in-section">
             <h3>Japanese Telecom Leader</h3>
             <p class="case-meta">Data Migration | Tokyo, Japan</p>
             <p>
               Delivered a multi-petabyte migration for a national telecom provider without service interruption. Achieved 0.001% data discrepancy and accelerated compliance reporting by 45%.
             </p>
           </article>
-          <article class="case-card">
+          <article class="case-card fade-in-section">
             <h3>AEON Credit Service APAC</h3>
             <p class="case-meta">Credit Platform Modernization | Asia-Pacific</p>
             <p>
@@ -261,14 +261,14 @@
 
       <section class="assurance">
         <div class="container assurance-content">
-          <div>
+          <div class="fade-in-left">
             <p class="eyebrow">Confidence Delivered</p>
             <h2>Operational resilience, backed by verifiable performance data.</h2>
             <p>
               Every KYNDRIX solution is reinforced by traceable documentation, automated testing, and executive-ready reporting. We move fast, but never at the expense of integrity.
             </p>
           </div>
-          <div class="metrics">
+          <div class="metrics fade-in-right">
             <div>
               <span class="metric-value">25+</span>
               <span class="metric-label">Mission-critical programs launched</span>
@@ -353,14 +353,15 @@
 
       // Scroll animations
       (function() {
-        const fadeInSections = document.querySelectorAll('.fade-in-section');
+        const fadeInSections = document.querySelectorAll('.fade-in-section, .fade-in-left, .fade-in-right');
         
         function checkFadeIn() {
           fadeInSections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionVisible = 150;
+            const sectionRect = section.getBoundingClientRect();
+            // Calculate trigger point at bottom third of the viewport
+            const fadeOutTrigger = window.innerHeight * 0.67; // 67% from top = 33% from bottom
             
-            if (sectionTop < window.innerHeight - sectionVisible) {
+            if (sectionRect.top < fadeOutTrigger) {
               section.classList.add('is-visible');
             } else {
               // When scrolling back up, remove is-visible class to trigger fade out

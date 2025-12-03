@@ -276,9 +276,6 @@ html {
 .section-header {
   text-align: center;
   margin-bottom: 5rem;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
 }
 
 .section-header h2 {
@@ -433,16 +430,6 @@ html {
   padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.case-card:nth-child(1) {
-  animation: fadeInUp 1s ease forwards 0.2s;
-}
-
-.case-card:nth-child(2) {
-  animation: fadeInUp 1s ease forwards 0.4s;
 }
 
 .case-card:hover {
@@ -485,12 +472,6 @@ html {
   align-items: center;
 }
 
-.assurance-content > div:first-child {
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s ease forwards 0.2s;
-}
-
 .assurance-content > div:first-child h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 600;
@@ -508,9 +489,6 @@ html {
 .metrics {
   display: grid;
   gap: 3rem;
-  opacity: 0;
-  transform: translateX(30px);
-  animation: fadeInRight 1s ease forwards 0.4s;
 }
 
 .metrics > div {
@@ -729,6 +707,30 @@ html {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Scroll animations - left to right */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll animations - right to left */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Responsive Design */
