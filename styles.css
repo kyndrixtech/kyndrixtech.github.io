@@ -533,18 +533,53 @@ html {
   animation: fadeInUp 1s ease forwards;
 }
 
-.contact-card > div:first-child h2 {
+.contact-content h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #1d1d1f;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.35;
+  background: linear-gradient(135deg, #1d1d1f 0%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
 }
 
-.contact-card > div:first-child p {
+.consultation-highlight {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(29, 29, 31, 0.05);
+  border-radius: 16px;
+  border-left: 4px solid #1d1d1f;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+  margin-top: 0;
+}
+
+.consultation-highlight:hover {
+  background: rgba(29, 29, 31, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.consultation-details {
   font-size: 1.125rem;
   color: #86868b;
   line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-form {
