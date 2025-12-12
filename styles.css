@@ -399,13 +399,33 @@ html {
   letter-spacing: -0.02em;
   color: #1d1d1f;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.split > div:first-child p {
+/* 确保左边内容垂直居中 */
+.fade-in-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 1.125rem;
   color: #86868b;
-  line-height: 1.7;
 }
+
+.advantages-list li {
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 移除多余的伪元素，因为HTML中已经直接使用了✔符号 */
 
 .pillars {
   display: grid;
